@@ -1,6 +1,7 @@
 import 'package:banking_app_ui/component/custom_app_bar.dart';
 import 'package:banking_app_ui/component/total_bal_amount.dart';
 import 'package:banking_app_ui/component/transcation_shortcut.dart';
+import 'package:banking_app_ui/screen/my_cards_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: const Color.fromARGB(255, 1, 2, 36),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -31,26 +32,35 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TransactionShortCut(
+                  const TransactionShortCut(
                     icon: Icons.add_card_outlined,
                     text: 'Send',
                   ),
-                  TransactionShortCut(
+                  const TransactionShortCut(
                     icon: Icons.add_card_outlined,
                     text: 'Receive',
                   ),
-                  TransactionShortCut(
+                  const TransactionShortCut(
                     icon: Icons.arrow_downward_rounded,
                     text: 'Withdraw',
                   ),
                   TransactionShortCut(
                     icon: Icons.dashboard_customize_outlined,
                     text: 'More',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MyCardsScreen(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
-              SizedBox(height: 40),
-              Row(
+              const SizedBox(height: 40),
+              // Transaction Text
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
