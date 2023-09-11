@@ -1,3 +1,4 @@
+import 'package:banking_app_ui/component/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,6 +20,9 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               SizedBox(height: 10),
               // Custom AppBar of Application
+              const CustomAppBar(title: 'Home'),
+              const SizedBox(height: 20),
+              // Total Balance in Text
             ],
           ),
         ),

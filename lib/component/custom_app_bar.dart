@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+  final String title;
+  const CustomAppBar({
+    super.key,
+    required this.title,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +24,9 @@ class CustomAppBar extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        const Text(
-          'Home',
-          style: TextStyle(
+        Text(
+          title,
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
