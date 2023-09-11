@@ -29,25 +29,10 @@ class _MyCardsScreenState extends State<MyCardsScreen> {
               SizedBox(height: 40),
               // List of cards
               Container(
-                height: 300,
+                height: 200,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: [
-                    Container(
-                      height: 200,
-                      width: 100,
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 214, 53, 174),
-                            Color.fromARGB(255, 14, 99, 209),
-                          ],
-                          begin: Alignment.bottomLeft,
-                          end: Alignment.topRight,
-                        ),
-                      ),
-                    ),
-                  ],
+                  children: [],
                 ),
               ),
             ],
