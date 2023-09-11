@@ -11,7 +11,7 @@ class TotalBalanceAmount extends StatelessWidget {
           '32,510.48',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 24,
+            fontSize: 35,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -19,6 +19,7 @@ class TotalBalanceAmount extends StatelessWidget {
         Text(
           'Total Balance in USD',
           style: TextStyle(
+            fontSize: 20,
             color: Colors.grey[600],
           ),
         ),

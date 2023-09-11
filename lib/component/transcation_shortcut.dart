@@ -27,8 +27,14 @@ class TransactionShortCut extends StatelessWidget {
           ),
         ),
         SizedBox(height: 5),
-        Text(text)
+        Text(
+          text,
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        )
       ],
     );
   }
 }
+

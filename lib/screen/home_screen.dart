@@ -25,8 +25,8 @@ class _HomeScreenState extends State<HomeScreen> {
               const CustomAppBar(title: 'Home'),
               const SizedBox(height: 20),
               // Total Balance in Text
-              TotalBalanceAmount(),
-              SizedBox(height: 20),
+              const TotalBalanceAmount(),
+              const SizedBox(height: 20),
               // Transaction shortcut Button
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,9 +49,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 40),
               Row(
-                children: [],
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Transaction',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
