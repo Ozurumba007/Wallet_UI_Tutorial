@@ -1,4 +1,5 @@
 import 'package:banking_app_ui/component/custom_app_bar.dart';
+import 'package:banking_app_ui/component/total_bal_amount.dart';
 import 'package:flutter/material.dart';
 
 class MyCardsScreen extends StatefulWidget {
@@ -11,14 +12,46 @@ class MyCardsScreen extends StatefulWidget {
 class _MyCardsScreenState extends State<MyCardsScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Color.fromARGB(255, 1, 2, 36),
       body: SafeArea(
-        child: Column(
-          children: [
-            SizedBox(height: 10),
-            CustomAppBar(title: 'My Cards'),
-          ],
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              SizedBox(height: 10),
+              // Custom AppBar of Application
+              CustomAppBar(title: 'My Cards'),
+
+              const SizedBox(height: 40),
+              // Total Balance in Text
+              TotalBalanceAmount(),
+              SizedBox(height: 40),
+              // List of cards
+              Container(
+                height: 300,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Container(
+                      height: 200,
+                      width: 100,
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 214, 53, 174),
+                            Color.fromARGB(255, 14, 99, 209),
+                          ],
+                          begin: Alignment.bottomLeft,
+                          end: Alignment.topRight,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
