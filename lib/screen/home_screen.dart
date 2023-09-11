@@ -19,43 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               SizedBox(height: 10),
               // Custom AppBar of Application
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 1, 2, 54),
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    child: Icon(
-                      Icons.menu,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const Text(
-                    'Home',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 1, 2, 54),
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    child: Icon(
-                      Icons.notifications_none_outlined,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
             ],
           ),
         ),
