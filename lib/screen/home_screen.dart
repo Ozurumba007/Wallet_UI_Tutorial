@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 40),
               // Total Balance in Text
               const TotalBalanceAmount(),
-              const SizedBox(height: 20),
+              const SizedBox(height: 40),
               // Transaction shortcut Button
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

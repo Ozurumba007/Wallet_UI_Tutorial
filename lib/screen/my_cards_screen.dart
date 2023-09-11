@@ -1,4 +1,5 @@
 import 'package:banking_app_ui/component/custom_app_bar.dart';
+import 'package:banking_app_ui/component/my_card.dart';
 import 'package:banking_app_ui/component/total_bal_amount.dart';
 import 'package:flutter/material.dart';
 
@@ -32,8 +33,46 @@ class _MyCardsScreenState extends State<MyCardsScreen> {
                 height: 200,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: [],
+                  children: const [
+                    MyCard(
+                      cardNumber: '**** 5052',
+                      colors: [
+                        Color.fromARGB(255, 214, 53, 174),
+                        Color.fromARGB(255, 14, 99, 209),
+                      ],
+                    ),
+                    SizedBox(width: 15),
+                    MyCard(
+                      cardNumber: '**** 3274',
+                      colors: [
+                        Color.fromARGB(255, 31, 192, 192),
+                        Color.fromARGB(255, 14, 99, 209),
+                      ],
+                    ),
+                    SizedBox(width: 15),
+                    MyCard(
+                      cardNumber: '**** 7607',
+                      colors: [
+                        Color.fromARGB(255, 177, 14, 209),
+                        Color.fromARGB(255, 182, 92, 8),
+                      ],
+                    ),
+                  ],
                 ),
+              ),
+              SizedBox(height: 20),
+              // Transaction Text
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Transactions',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

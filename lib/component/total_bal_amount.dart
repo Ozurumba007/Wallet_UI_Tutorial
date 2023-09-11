@@ -15,7 +15,7 @@ class TotalBalanceAmount extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        const SizedBox(height: 5),
+        const SizedBox(height: 10),
         Text(
           'Total Balance in USD',
           style: TextStyle(

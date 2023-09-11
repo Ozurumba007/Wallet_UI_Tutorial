@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
-  const MyCard({super.key});
+  final String cardNumber;
+  final List<Color> colors;
+  const MyCard({
+    super.key,
+    required this.cardNumber,
+    required this.colors,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -9,23 +15,20 @@ class MyCard extends StatelessWidget {
       height: 150,
       width: 170,
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [
-            Color.fromARGB(255, 214, 53, 174),
-            Color.fromARGB(255, 14, 99, 209),
-          ],
+        gradient: LinearGradient(
+          colors: colors,
           begin: Alignment.bottomLeft,
           end: Alignment.topRight,
         ),
         borderRadius: BorderRadius.circular(12),
       ),
-      child: const Padding(
+      child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
@@ -55,7 +58,7 @@ class MyCard extends StatelessWidget {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  '**** 5052',
+                  cardNumber,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
