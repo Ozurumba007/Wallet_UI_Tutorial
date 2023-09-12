@@ -20,13 +20,20 @@ class TransactionDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Container(
-        height: 50,
+        height: 60,
         width: 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
           color: Color.fromARGB(255, 3, 5, 95),
         ),
-        child: Image.asset(image),
+        child: Container(
+          // color: Colors.white,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25),
+            color: Colors.white,
+          ),
+          child: Image.asset(image),
+        ),
       ),
       title: Text(
         title,

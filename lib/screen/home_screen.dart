@@ -22,82 +22,102 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: SafeArea(
-          child: Column(
-            children: [
-              const SizedBox(height: 10),
-              // Custom AppBar of Application
-              const CustomAppBar(title: 'Home'),
-              const SizedBox(height: 40),
-              // Total Balance in Text
-              const TotalBalanceAmount(),
-              const SizedBox(height: 40),
-              // Transaction shortcut Button
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const TransactionShortCut(
-                    icon: Icons.add_card_outlined,
-                    text: 'Send',
-                  ),
-                  const TransactionShortCut(
-                    icon: Icons.add_card_outlined,
-                    text: 'Receive',
-                  ),
-                  const TransactionShortCut(
-                    icon: Icons.arrow_downward_rounded,
-                    text: 'Withdraw',
-                  ),
-                  TransactionShortCut(
-                    icon: Icons.dashboard_customize_outlined,
-                    text: 'More',
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const MyCardsScreen(),
-                        ),
-                      );
-                    },
-                  ),
-                ],
-              ),
-              const SizedBox(height: 40),
-              // Transaction Text
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    'Transaction',
-                    style: GoogleFonts.baloo2(
-                      color: Colors.white,
-                      fontSize: 24,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(height: 10),
+                // Custom AppBar of Application
+                const CustomAppBar(title: 'Home'),
+                const SizedBox(height: 35),
+                // Total Balance in Text
+                const TotalBalanceAmount(),
+                const SizedBox(height: 35),
+                // Transaction shortcut Button
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const TransactionShortCut(
+                      icon: Icons.add_card_outlined,
+                      text: 'Send',
                     ),
-                  ),
-                ],
-              ),
-              TransactionDetails(
-                image: 'assets/walmarts.png',
-                title: 'Starbucks',
-                subTitle: 'Yesterday',
-                amountDebited: '-\$5.00',
-                placeOfSpending: 'Shopping',
-              ),
-              Divider(
-                color: Colors.white,
-                thickness: 1,
-              ),
-              TransactionDetails(
-                image: 'assets/starbucks.png',
-                title: 'Starbucks',
-                subTitle: 'Yesterday',
-                amountDebited: '-\$5.00',
-                placeOfSpending: 'Shopping',
-              ),
-              Divider(
-                color: Colors.white,
-                thickness: 1,
-              ),
-            ],
+                    const TransactionShortCut(
+                      icon: Icons.add_card_outlined,
+                      text: 'Receive',
+                    ),
+                    const TransactionShortCut(
+                      icon: Icons.arrow_downward_rounded,
+                      text: 'Withdraw',
+                    ),
+                    TransactionShortCut(
+                      icon: Icons.dashboard_customize_outlined,
+                      text: 'More',
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MyCardsScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 40),
+                // Transaction Text
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Transaction',
+                      style: GoogleFonts.baloo2(
+                        color: Colors.white,
+                        fontSize: 24,
+                      ),
+                    ),
+                  ],
+                ),
+                const TransactionDetails(
+                  image: 'assets/starbucks.png',
+                  title: 'Starbucks',
+                  subTitle: 'Yesterday',
+                  amountDebited: '-\$5.00',
+                  placeOfSpending: 'Shopping',
+                ),
+                const Divider(
+                  color: Colors.grey,
+                  thickness: 1,
+                ),
+                const TransactionDetails(
+                  image: 'assets/walmarts.png',
+                  title: 'Walmart',
+                  subTitle: 'Yesterday',
+                  amountDebited: '-\$112.96',
+                  placeOfSpending: 'Shopping',
+                ),
+                const Divider(
+                  color: Colors.grey,
+                  thickness: 1,
+                ),
+                const TransactionDetails(
+                  image: 'assets/netflix.png',
+                  title: 'Netflix',
+                  subTitle: 'Yesterday',
+                  amountDebited: '-\$15.00',
+                  placeOfSpending: 'Subscription',
+                ),
+                const Divider(
+                  color: Colors.grey,
+                  thickness: 1,
+                ),
+                const TransactionDetails(
+                  image: 'assets/flipcart.png',
+                  title: 'Flipcart',
+                  subTitle: 'Yesterday',
+                  amountDebited: '-\$43.78',
+                  placeOfSpending: 'Ecommerce',
+                ),
+              ],
+            ),
           ),
         ),
       ),
