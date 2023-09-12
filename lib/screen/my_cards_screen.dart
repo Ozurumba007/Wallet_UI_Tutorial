@@ -2,6 +2,7 @@ import 'package:banking_app_ui/component/custom_app_bar.dart';
 import 'package:banking_app_ui/component/my_card.dart';
 import 'package:banking_app_ui/component/total_bal_amount.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyCardsScreen extends StatefulWidget {
   const MyCardsScreen({super.key});
@@ -62,12 +63,12 @@ class _MyCardsScreenState extends State<MyCardsScreen> {
               ),
               SizedBox(height: 20),
               // Transaction Text
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     'Transactions',
-                    style: TextStyle(
+                    style: GoogleFonts.baloo2(
                       color: Colors.white,
                       fontSize: 24,
                     ),

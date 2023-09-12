@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TransactionShortCut extends StatelessWidget {
   final IconData icon;
@@ -34,7 +35,7 @@ class TransactionShortCut extends StatelessWidget {
         SizedBox(height: 5),
         Text(
           text,
-          style: TextStyle(
+          style: GoogleFonts.baloo2(
             color: Colors.white,
           ),
         )

@@ -3,6 +3,7 @@ import 'package:banking_app_ui/component/total_bal_amount.dart';
 import 'package:banking_app_ui/component/transcation_shortcut.dart';
 import 'package:banking_app_ui/screen/my_cards_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -60,12 +61,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(height: 40),
               // Transaction Text
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     'Transaction',
-                    style: TextStyle(
+                    style: GoogleFonts.baloo2(
                       color: Colors.white,
                       fontSize: 24,
                     ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyCard extends StatelessWidget {
   final String cardNumber;
@@ -28,12 +29,12 @@ class MyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   'Visa',
-                  style: TextStyle(
+                  style: GoogleFonts.baloo2(
                     color: Colors.white,
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -50,7 +51,7 @@ class MyCard extends StatelessWidget {
               children: [
                 Text(
                   'Number',
-                  style: TextStyle(
+                  style: GoogleFonts.baloo2(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w300,
@@ -59,7 +60,7 @@ class MyCard extends StatelessWidget {
                 SizedBox(height: 5),
                 Text(
                   cardNumber,
-                  style: TextStyle(
+                  style: GoogleFonts.baloo2(
                     color: Colors.white,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
