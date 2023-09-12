@@ -5,6 +5,8 @@ import 'package:banking_app_ui/screen/my_cards_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../component/transaction_details.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -52,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MyCardsScreen(),
+                          builder: (context) => const MyCardsScreen(),
                         ),
                       );
                     },
@@ -72,6 +74,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ],
+              ),
+              TransactionDetails(
+                image: 'assets/walmarts.png',
+                title: 'Starbucks',
+                subTitle: 'Yesterday',
+                amountDebited: '-\$5.00',
+                placeOfSpending: 'Shopping',
+              ),
+              Divider(
+                color: Colors.white,
+                thickness: 1,
+              ),
+              TransactionDetails(
+                image: 'assets/starbucks.png',
+                title: 'Starbucks',
+                subTitle: 'Yesterday',
+                amountDebited: '-\$5.00',
+                placeOfSpending: 'Shopping',
+              ),
+              Divider(
+                color: Colors.white,
+                thickness: 1,
               ),
             ],
           ),

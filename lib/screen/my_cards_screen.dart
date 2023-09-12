@@ -1,6 +1,7 @@
 import 'package:banking_app_ui/component/custom_app_bar.dart';
 import 'package:banking_app_ui/component/my_card.dart';
 import 'package:banking_app_ui/component/total_bal_amount.dart';
+import 'package:banking_app_ui/component/transaction_details.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,20 +16,20 @@ class _MyCardsScreenState extends State<MyCardsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 1, 2, 36),
+      backgroundColor: const Color.fromARGB(255, 1, 2, 36),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: [
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               // Custom AppBar of Application
-              CustomAppBar(title: 'My Cards'),
+              const CustomAppBar(title: 'My Cards'),
 
               const SizedBox(height: 40),
               // Total Balance in Text
-              TotalBalanceAmount(),
-              SizedBox(height: 40),
+              const TotalBalanceAmount(),
+              const SizedBox(height: 40),
               // List of cards
               Container(
                 height: 200,
@@ -61,7 +62,7 @@ class _MyCardsScreenState extends State<MyCardsScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               // Transaction Text
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -74,6 +75,24 @@ class _MyCardsScreenState extends State<MyCardsScreen> {
                     ),
                   ),
                 ],
+              ),
+              TransactionDetails(
+                image: 'assets/starbucks.png',
+                title: 'Starbucks',
+                subTitle: 'Yesterday',
+                amountDebited: '-\$5.00',
+                placeOfSpending: 'Shopping',
+              ),
+              Divider(
+                color: Colors.white,
+                thickness: 1,
+              ),
+              TransactionDetails(
+                image: 'assets/walmarts.png',
+                title: 'Starbucks',
+                subTitle: 'Yesterday',
+                amountDebited: '-\$5.00',
+                placeOfSpending: 'Shopping',
               ),
             ],
           ),
